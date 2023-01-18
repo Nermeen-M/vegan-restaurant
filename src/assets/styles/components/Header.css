@@ -35,6 +35,7 @@ header nav a:hover {
 
 @media screen and (min-width: 1200px) {
   header {
+    height: 80px;
     padding: var(--space-medium) var(--space-x-large);
   }
   header nav {

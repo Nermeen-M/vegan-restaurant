@@ -18,5 +18,6 @@
 /* Other */
 :root {
   --box-shadow: 0 4px 10px rgb(0 0 0 / 25%);
+  --text-shadow: 0 4px 4px rgb(0 0 0 / 25%);
   --transition: 0.3s ease-in-out;
 }

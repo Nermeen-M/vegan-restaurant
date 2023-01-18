@@ -1,0 +1,30 @@
+#hero {
+  height: calc(100vh - 60px);
+  background: url("../../images/hero-background.jpg") no-repeat 63% center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#hero .text {
+  text-align: center;
+  width: 316px;
+}
+
+#hero .text h1 {
+  color: var(--color-dark-gray);
+  text-shadow: var(--text-shadow);
+  margin-bottom: var(--space-medium);
+}
+
+#hero .text h2 {
+  color: var(--color-green);
+  text-shadow: var(--text-shadow);
+}
+
+@media screen and (min-width: 1200px) {
+  #hero {
+    height: calc(100vh - 80px);
+  }
+}
