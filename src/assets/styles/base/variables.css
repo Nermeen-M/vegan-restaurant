@@ -1,0 +1,22 @@
+/* Colors */
+:root {
+  --color-green: #64ad2a;
+  --color-orange: #f48e27;
+  --color-purple: #943a69;
+  --color-dark-gray: #3d3c3c;
+  --color-white: #ffffff;
+}
+
+/* Space */
+:root {
+  --space-small: 8px;
+  --space-medium: 16px;
+  --space-large: 24px;
+  --space-x-large: 32px;
+}
+
+/* Other */
+:root {
+  --box-shadow: 0 4px 10px rgb(0 0 0 / 25%);
+  --transition: 0.3s ease-in-out;
+}

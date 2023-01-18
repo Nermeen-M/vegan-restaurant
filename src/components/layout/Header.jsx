@@ -5,11 +5,10 @@ import logo from "../../assets/images/logo.png";
 export default function Header() {
   return (
     <header>
-      <Link to="/">
+      <Link to="/" className="logo">
         <img
           src={logo}
           alt="Logo contains a fork ended with leaf in diamond shape"
-          className="logo"
         />
       </Link>
 
@@ -17,7 +16,7 @@ export default function Header() {
         <Link to="/dishes">Dishes</Link>
         <Link to="/desserts">Desserts</Link>
         <Link to="/drinks">Drinks</Link>
-        <Link to="/contact-us">Contact us</Link>
+        <Link to="/contact">Contact</Link>
       </nav>
     </header>
   );
