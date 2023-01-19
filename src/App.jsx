@@ -2,26 +2,34 @@ import { Routes, Route } from "react-router-dom";
 
 import Header from "./components/layout/Header";
 import Home from "./pages/Home";
-import Dishes from "./pages/Dishes";
-import Desserts from "./pages/Desserts";
-import Drinks from "./pages/Drinks";
+import Category from "./pages/Category";
 import Contact from "./pages/Contact";
+
+import { useCategories } from "./state/CategoriesContext";
 
 import "./assets/styles/style.css";
 
 export default function App() {
+  const categories = useCategories();
+  const categoriesRoutes = categories.map((item) => (
+    <Route
+      key={item.id}
+      path={`/${item.name}`}
+      element={<Category categoryId={item.id} />}
+    ></Route>
+  ));
+
   return (
     <div className="App">
       <Header />
-      <div className="main">
+      <main>
         <Routes>
           <Route path="/" element={<Home />} exact />
-          <Route path="/dishes" element={<Dishes />} />
-          <Route path="/desserts" element={<Desserts />} />
-          <Route path="/drinks" element={<Drinks />} />
+          {categoriesRoutes}
+          {/* <Route path="/product/:productId" element={<Product />} /> */}
           <Route path="/contact" element={<Contact />} />
         </Routes>
-      </div>
+      </main>
     </div>
   );
 }

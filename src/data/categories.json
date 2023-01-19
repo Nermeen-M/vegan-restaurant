@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Dishes",
+    "image": "dishes.jpg",
+    "description": "Delicious vegan dishes with healthy nutritional balance - tailored to you. Try now!"
+  },
+  {
+    "id": 2,
+    "name": "Desserts",
+    "image": "desserts.jpg",
+    "description": "Our vegan desserts will satisfy any sweet tooth! Vegans and non-vegans will love."
+  },
+  {
+    "id": 3,
+    "name": "Drinks",
+    "image": "drinks.jpg",
+    "description": "Our cocktails use fun, natural ingredients like maple, beets and watermelon to add color and flavor."
+  }
+]
