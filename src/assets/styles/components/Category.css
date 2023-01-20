@@ -56,4 +56,10 @@
     width: 30%;
     height: 100%;
   }
+  .products-list .product-card .details {
+    width: 70%;
+  }
+  .products-list .product-card .details h3 {
+    text-align: left;
+  }
 }
