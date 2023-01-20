@@ -1,9 +1,10 @@
-// import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { useProducts } from "../state/ProductsContext";
+import { useCategories } from "../state/CategoriesContext";
 
 export default function Product() {
   const { selectedProduct } = useProducts();
+  const { selectedCategory } = useCategories();
   const { image, title, description, ingredients, nutritionFacts } =
     selectedProduct;
   // const params = useParams();
@@ -29,7 +30,9 @@ export default function Product() {
           ))}
         </tbody>
       </table>
-      <Link className="primary-button">Back</Link>
+      <Link className="primary-button" to={`/${selectedCategory.name}`}>
+        Back
+      </Link>
     </div>
   );
 }
