@@ -38,6 +38,9 @@ header nav a:hover {
     height: 80px;
     padding: var(--space-medium) var(--space-x-large);
   }
+  header .logo {
+    height: 55px;
+  }
   header nav {
     gap: var(--space-x-large);
   }

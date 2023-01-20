@@ -9,7 +9,7 @@ export default function ProductsList() {
   const { categories } = useCategories();
 
   const selectedCategory = categories.filter(
-    (item) => item.name == params.categoryName
+    (item) => item.name.toLowerCase() == params.categoryName.toLowerCase()
   )[0];
 
   const filteredProducts = products.filter(

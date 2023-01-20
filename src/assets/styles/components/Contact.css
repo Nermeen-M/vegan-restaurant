@@ -1,5 +1,3 @@
-.contact {
-}
 .contact .main-image {
   width: 235px;
   height: 300px;
@@ -49,4 +47,14 @@
 }
 .form .success {
   background: rgb(175, 228, 175);
+}
+
+@media screen and (min-width: 1200px) {
+  .contact .main-image {
+    height: 400px;
+    width: auto;
+  }
+  .form .form-field input {
+    padding: var(--space-small);
+  }
 }

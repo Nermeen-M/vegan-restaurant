@@ -42,4 +42,8 @@ html {
     max-width: 960px;
     margin: 0 auto;
   }
+
+  .primary-button {
+    margin: var(--space-x-large) 0;
+  }
 }
