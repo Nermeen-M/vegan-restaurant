@@ -8,7 +8,7 @@ export default function Product() {
     selectedProduct;
   // const params = useParams();
   return (
-    <div>
+    <div className="product-details container">
       <img src={require(`../assets/images/products/${image}`)} />
       <h2>{title}</h2>
       <p>{description}</p>
@@ -29,7 +29,7 @@ export default function Product() {
           ))}
         </tbody>
       </table>
-      <Link>Back</Link>
+      <Link className="primary-button">Back</Link>
     </div>
   );
 }

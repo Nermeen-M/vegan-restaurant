@@ -28,8 +28,10 @@ export default function ProductsList() {
       }}
     >
       <img src={require(`../assets/images/products/${item.image}`)} />
-      <h3>{item.title}</h3>
-      <p>{item.brief}</p>
+      <div className="details">
+        <h3>{item.title}</h3>
+        <p>{item.brief}</p>
+      </div>
     </Link>
   ));
   return <div className="products-list">{categoryProducts}</div>;

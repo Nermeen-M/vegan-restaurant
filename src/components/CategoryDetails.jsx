@@ -9,8 +9,10 @@ export default function CategoryDetails() {
   return (
     <div className="category-details">
       <img src={image} />
-      <h2>{name}</h2>
-      <p>{description}</p>
+      <div className="container">
+        <h2>{name}</h2>
+        <p>{description}</p>
+      </div>
     </div>
   );
 }
