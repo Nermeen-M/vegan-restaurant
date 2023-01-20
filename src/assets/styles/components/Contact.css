@@ -57,4 +57,7 @@
   .form .form-field input {
     padding: var(--space-small);
   }
+  .contact .map {
+    height: 350px;
+  }
 }

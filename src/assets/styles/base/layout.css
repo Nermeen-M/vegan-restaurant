@@ -21,6 +21,7 @@ html {
   margin: var(--space-x-large) auto;
   align-items: center;
   cursor: pointer;
+  transition: var(--transition);
 }
 .primary-button::before {
   content: "";
@@ -31,6 +32,14 @@ html {
   top: 6px;
   left: 6px;
   z-index: -1;
+  transition: var(--transition);
+}
+.primary-button:hover {
+  color: var(--color-white);
+}
+.primary-button:hover::before {
+  top: 0px;
+  left: 0px;
 }
 
 @media (min-width: 1280px) {

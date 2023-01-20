@@ -25,5 +25,9 @@ export default function ProductsList() {
       </div>
     </Link>
   ));
-  return <div className="products-list">{categoryProducts}</div>;
+  return (
+    <div className="container">
+      <div className="products-list">{categoryProducts}</div>
+    </div>
+  );
 }

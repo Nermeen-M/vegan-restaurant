@@ -37,8 +37,8 @@
   top: var(--space-medium);
   left: var(--space-medium);
   border: 2px solid var(--color-white);
-  width: 279px;
-  height: 168px;
+  height: calc(100% - 32px);
+  width: calc(100% - 32px);
 }
 .categories-list .category-card .details {
   padding-top: var(--space-large);
@@ -59,8 +59,18 @@
     flex-direction: row;
     gap: var(--space-large);
   }
+  .categories-list .category-card .image {
+    width: 48%;
+    height: 300px;
+  }
   .categories-list .category-card .details {
-    text-align: left;
     padding-top: 0;
+    width: 50%;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+  }
+  .category-card:nth-child(2) .image {
+    order: 1;
   }
 }

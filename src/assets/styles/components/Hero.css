@@ -10,6 +10,7 @@
 #hero .text {
   text-align: center;
   width: 316px;
+  animation-delay: 0.5s;
 }
 
 #hero .text h1 {
