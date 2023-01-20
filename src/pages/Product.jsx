@@ -1,28 +1,37 @@
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useProducts } from "../state/ProductsContext";
 import { useCategories } from "../state/CategoriesContext";
 
 export default function Product() {
-  const { selectedProduct } = useProducts();
-  const { selectedCategory } = useCategories();
-  const { image, title, description, ingredients, nutritionFacts } =
-    selectedProduct;
-  // const params = useParams();
+  const params = useParams();
+  const { products } = useProducts();
+  const { categories } = useCategories();
+
+  const selectedProduct = products.filter(
+    (item) => item.id == params.productId
+  )[0];
+
+  const selectedCategory = categories.filter(
+    (item) => item.id == selectedProduct.categoryId
+  )[0];
+
   return (
     <div className="product-details container">
-      <img src={require(`../assets/images/products/${image}`)} />
-      <h2>{title}</h2>
-      <p>{description}</p>
+      <img
+        src={require(`../assets/images/products/${selectedProduct.image}`)}
+      />
+      <h2>{selectedProduct.title}</h2>
+      <p>{selectedProduct.description}</p>
       <h3>Ingredients</h3>
       <ul>
-        {ingredients.map((item, index) => (
+        {selectedProduct.ingredients.map((item, index) => (
           <li key={index}>{item}</li>
         ))}
       </ul>
       <h3>Nutrition Facts</h3>
       <table>
         <tbody>
-          {nutritionFacts.map((item) => (
+          {selectedProduct.nutritionFacts.map((item) => (
             <tr key={item.id}>
               <td>{item.element}</td>
               <td>{item.value}</td>

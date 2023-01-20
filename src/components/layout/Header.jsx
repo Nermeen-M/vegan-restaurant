@@ -5,16 +5,10 @@ import logo from "../../assets/images/logo.png";
 import { useCategories } from "../../state/CategoriesContext";
 
 export default function Header() {
-  const { categories, setSelectedCategory } = useCategories();
+  const { categories } = useCategories();
 
   const navLinks = categories.map((item) => (
-    <Link
-      key={item.id}
-      to={`/${item.name}`}
-      onClick={() => {
-        setSelectedCategory(item);
-      }}
-    >
+    <Link key={item.id} to={`/${item.name}`}>
       {item.name}
     </Link>
   ));
@@ -29,10 +23,6 @@ export default function Header() {
       </Link>
 
       <nav>
-        {/* <Link to="/dishes">Dishes</Link>
-        <Link to="/desserts">Desserts</Link>
-        <Link to="/drinks">Drinks</Link>
-         */}
         {navLinks}
         <Link to="/contact">Contact</Link>
       </nav>

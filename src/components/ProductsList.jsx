@@ -1,32 +1,23 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
-
-import Product from "../pages/Product";
+import { Link, useParams } from "react-router-dom";
 
 import { useProducts } from "../state/ProductsContext";
 import { useCategories } from "../state/CategoriesContext";
 
 export default function ProductsList() {
-  const { products, setSelectedProduct } = useProducts();
-  const { selectedCategory } = useCategories();
+  const params = useParams();
+  const { products } = useProducts();
+  const { categories } = useCategories();
+
+  const selectedCategory = categories.filter(
+    (item) => item.name == params.categoryName
+  )[0];
 
   const filteredProducts = products.filter(
     (item) => item.categoryId === selectedCategory.id
   );
 
-  //   function clickHandler(item) {
-  //     setSelectedProduct(item);
-  //   }
-
   const categoryProducts = filteredProducts.map((item) => (
-    <Link
-      className="product-card"
-      key={item.id}
-      to={`/product/${item.id}`}
-      onClick={() => {
-        setSelectedProduct(item);
-      }}
-    >
+    <Link className="product-card" key={item.id} to={`/product/${item.id}`}>
       <img src={require(`../assets/images/products/${item.image}`)} />
       <div className="details">
         <h3>{item.title}</h3>
