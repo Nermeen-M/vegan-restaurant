@@ -11,13 +11,10 @@ import { useCategories } from "./state/CategoriesContext";
 import "./assets/styles/style.css";
 
 export default function App() {
-  const categories = useCategories();
+  const { categories, setSelectedCategory } = useCategories();
+
   const categoriesRoutes = categories.map((item) => (
-    <Route
-      key={item.id}
-      path={`/${item.name}`}
-      element={<Category categoryId={item.id} />}
-    ></Route>
+    <Route key={item.id} path={`/${item.name}`} element={<Category />}></Route>
   ));
 
   return (

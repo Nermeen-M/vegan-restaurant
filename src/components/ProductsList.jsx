@@ -4,12 +4,14 @@ import { Link } from "react-router-dom";
 import Product from "../pages/Product";
 
 import { useProducts } from "../state/ProductsContext";
+import { useCategories } from "../state/CategoriesContext";
 
-export default function ProductsList({ categoryId }) {
+export default function ProductsList() {
   const { products, setSelectedProduct } = useProducts();
+  const { selectedCategory } = useCategories();
 
   const filteredProducts = products.filter(
-    (item) => item.categoryId === categoryId
+    (item) => item.categoryId === selectedCategory.id
   );
 
   //   function clickHandler(item) {

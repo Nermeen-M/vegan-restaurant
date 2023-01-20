@@ -1,4 +1,4 @@
-import { createContext, useContext } from "react";
+import { createContext, useContext, useState } from "react";
 
 import CategoriesData from "../data/categories.json";
 
@@ -6,8 +6,12 @@ const CategoriesContext = createContext(null);
 
 export function CategoriesProvider(props) {
   const categories = CategoriesData;
+  const [selectedCategory, setSelectedCategory] = useState(null);
+
+  const contextValue = { categories, selectedCategory, setSelectedCategory };
+
   return (
-    <CategoriesContext.Provider value={categories}>
+    <CategoriesContext.Provider value={contextValue}>
       {props.children}
     </CategoriesContext.Provider>
   );
