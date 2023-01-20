@@ -1,0 +1,52 @@
+.contact {
+}
+.contact .main-image {
+  width: 235px;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto var(--space-x-large) auto;
+}
+.contact h3 {
+  color: var(--color-green);
+  margin-bottom: var(--space-medium);
+}
+.contact .timing {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--space-medium);
+}
+
+.contact .map {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  margin: var(--space-x-large) 0;
+}
+
+.form .form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--space-medium);
+}
+.form .form-field label {
+  margin-bottom: var(--space-small);
+}
+.form .form-field input {
+  width: 100%;
+  height: 50px;
+  border: 1px solid var(--color-orange);
+  padding: var(--space-medium);
+}
+.form .error,
+.form .success {
+  padding: var(--space-x-large);
+  width: 100%;
+  transition: var(--transition);
+}
+.form .error {
+  background: rgb(246, 168, 168);
+}
+.form .success {
+  background: rgb(175, 228, 175);
+}
