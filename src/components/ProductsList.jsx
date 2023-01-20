@@ -13,7 +13,11 @@ export default function ProductsList() {
   const filteredProducts = getProductsByCategoryId(selectedCategory.id);
 
   const categoryProducts = filteredProducts.map((item) => (
-    <Link className="product-card" key={item.id} to={`/product/${item.id}`}>
+    <Link
+      className="product-card"
+      key={item.id}
+      to={`/${params.categoryName}/${item.id}`}
+    >
       <img src={require(`../assets/images/products/${item.image}`)} />
       <div className="details">
         <h3>{item.title}</h3>

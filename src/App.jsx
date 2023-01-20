@@ -17,7 +17,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} exact />
           <Route path="/:categoryName" element={<Category />} />
-          <Route path="/product/:productId" element={<Product />} />
+          <Route path="/:categoryName/:productId" element={<Product />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
