@@ -7,14 +7,8 @@ export default function Product() {
   const { getProductById } = useProducts();
   const { getCategoryById } = useCategories();
 
-  // const selectedProduct = products.filter(
-  //   (item) => item.id == params.productId
-  // )[0];
   const selectedProduct = getProductById(params.productId);
 
-  // const selectedCategory = categories.filter(
-  //   (item) => item.id == selectedProduct.categoryId
-  // )[0];
   const selectedCategory = getCategoryById(selectedProduct.categoryId);
   return (
     <div className="product-details container">

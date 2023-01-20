@@ -1,6 +1,5 @@
 import BookingForm from "../components/BookingForm";
 import ownerImage from "../assets/images/owner.png";
-import mapImage from "../assets/images/map.png";
 
 export default function Contact() {
   return (
