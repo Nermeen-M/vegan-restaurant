@@ -1,6 +1,22 @@
 [
   {
     "id": 1,
+    "title": "Avocado and peas bowl",
+    "image": "avocado-peas-bowl.jpg",
+    "brief": "This delicious salad is loaded with avocado",
+    "description": "This delicious salad is loaded with avocado, peas, sweet corn and finished off with a honey-cumin dressing",
+    "ingredients": ["Peas", "Quinoa", "Avocado", "Sweet corn", "lettuce"],
+    "nutritionFacts": [
+      { "id": 1, "element": "Calories", "value": "240" },
+      { "id": 2, "element": "Fiber", "value": "3 g" },
+      { "id": 3, "element": "Total Fat", "value": "13 g" },
+      { "id": 4, "element": "Protein", "value": "12 g" },
+      { "id": 5, "element": "Sodium", "value": "486 mg" }
+    ],
+    "categoryId": 1
+  },
+  {
+    "id": 2,
     "title": "Burrito",
     "image": "burrito.jpg",
     "brief": "when you want a little of everything",
@@ -13,42 +29,26 @@
       "black rice"
     ],
     "nutritionFacts": [
-      { "Calories": "447" },
-      { "Total Fat": "13 g" },
-      { "Protein": "14 g" },
-      { "Sodium": "654 mg" }
-    ],
-    "categoryId": 1
-  },
-  {
-    "id": 2,
-    "title": "Veggie burger",
-    "image": "vegan-burger.jpg",
-    "brief": "These veggie burgers are packed with vegetables!",
-    "description": "Try our veggie burgers that are hearty, flavorful and full of vegetables. These delicious vegetable-packed burgers are high in fiber and come in at just under 200 calories for one patty",
-    "ingredients": ["Beans", "Mushrooms", "Corriander", "Onion", "Tomato"],
-    "nutritionFacts": [
-      { "Calories": "195" },
-      { "Fiber": "5 g" },
-      { "Total Fat": "13 g" },
-      { "Protein": "16 g" },
-      { "Sodium": "328 mg" }
+      { "id": 1, "element": "Calories", "value": "447" },
+      { "id": 2, "element": "Total Fat", "value": "13 g" },
+      { "id": 3, "element": "Protein", "value": "14 g" },
+      { "id": 4, "element": "Sodium", "value": "654 mg" }
     ],
     "categoryId": 1
   },
   {
     "id": 3,
-    "title": "Avocado and peas bowl",
-    "image": "avocado-peas-bowl.jpg",
-    "brief": "This delicious salad is loaded with avocado",
-    "description": "This delicious salad is loaded with avocado, peas, sweet corn and finished off with a honey-cumin dressing",
-    "ingredients": ["Peas", "Quinoa", "Avocado", "Sweet corn", "lettuce"],
+    "title": "Veggie burger",
+    "image": "vegan-burger.jpg",
+    "brief": "Try our veggie burgers that are hearty, flavorful and full of vegetables.",
+    "description": "Try our veggie burgers that are hearty, flavorful and full of vegetables. These delicious vegetable-packed burgers are high in fiber and come in at just under 200 calories for one patty",
+    "ingredients": ["Beans", "Mushrooms", "Corriander", "Onion", "Tomato"],
     "nutritionFacts": [
-      { "Calories": "240" },
-      { "Fiber": "3 g" },
-      { "Total Fat": "13 g" },
-      { "Protein": "12 g" },
-      { "Sodium": "486 mg" }
+      { "id": 1, "element": "Calories", "value": "195" },
+      { "id": 2, "element": "Fiber", "value": "5 g" },
+      { "id": 3, "element": "Total Fat", "value": "13 g" },
+      { "id": 4, "element": "Protein", "value": "16 g" },
+      { "id": 5, "element": "Sodium", "value": "328 mg" }
     ],
     "categoryId": 1
   },
@@ -57,13 +57,13 @@
     "title": "White sause pasta",
     "image": "pasta.jpg",
     "brief": "Flavorful, low-fat and kid-friendly PASTA!",
-    "description": "description 1",
+    "description": "Flavorful, low-fat and kid-friendly PASTA!",
     "ingredients": ["Pasta", "Soy milk", "Bell pepper", "Garlic", "vegan meat"],
     "nutritionFacts": [
-      { "Calories": "534" },
-      { "Total Fat": "15 g" },
-      { "Protein": "10 g" },
-      { "Sodium": "440 mg" }
+      { "id": 1, "element": "Calories", "value": "534" },
+      { "id": 2, "element": "Total Fat", "value": "15 g" },
+      { "id": 3, "element": "Protein", "value": "10 g" },
+      { "id": 4, "element": "Sodium", "value": "440 mg" }
     ],
     "categoryId": 1
   },
@@ -82,10 +82,10 @@
       "Sugar"
     ],
     "nutritionFacts": [
-      { "Calories": "792" },
-      { "Total Fat": "36 g" },
-      { "Protein": "9 g" },
-      { "Sodium": "398 mg" }
+      { "id": 1, "element": "Calories", "value": "792" },
+      { "id": 2, "element": "Total Fat", "value": "36 g" },
+      { "id": 3, "element": "Protein", "value": "9 g" },
+      { "id": 4, "element": "Sodium", "value": "398 mg" }
     ],
     "categoryId": 2
   },
@@ -104,10 +104,10 @@
       "Sugar"
     ],
     "nutritionFacts": [
-      { "Calories": "640" },
-      { "Total Fat": "32 g" },
-      { "Protein": "11 g" },
-      { "Sodium": "428 mg" }
+      { "id": 1, "element": "Calories", "value": "640" },
+      { "id": 2, "element": "Total Fat", "value": "32 g" },
+      { "id": 3, "element": "Protein", "value": "11 g" },
+      { "id": 4, "element": "Sodium", "value": "428 mg" }
     ],
     "categoryId": 2
   },
@@ -119,10 +119,10 @@
     "description": "With our ice cream, you can have a sweet tooth and be in the pink of health too! choose from these flavours: Mango, strawberry or chocolate",
     "ingredients": ["coconut milk", "sugar", "vanilla", "almond milk"],
     "nutritionFacts": [
-      { "Calories": "257" },
-      { "Total Fat": "20 g" },
-      { "Protein": "14 g" },
-      { "Sodium": "198 mg" }
+      { "id": 1, "element": "Calories", "value": "257" },
+      { "id": 2, "element": "Total Fat", "value": "20 g" },
+      { "id": 3, "element": "Protein", "value": "14 g" },
+      { "id": 4, "element": "Sodium", "value": "198 mg" }
     ],
     "categoryId": 2
   },
@@ -134,10 +134,10 @@
     "description": "gluten-free cheesecakes that are creamy, slightly tart, perfectly sweet, and 100% irresistible.",
     "ingredients": ["almond milk", "blueberries", "lemon", "maple syrup"],
     "nutritionFacts": [
-      { "Calories": "513" },
-      { "Total Fat": "29 g" },
-      { "Protein": "12 g" },
-      { "Sodium": "254 mg" }
+      { "id": 1, "element": "Calories", "value": "513" },
+      { "id": 2, "element": "Total Fat", "value": "29 g" },
+      { "id": 3, "element": "Protein", "value": "12 g" },
+      { "id": 4, "element": "Sodium", "value": "254 mg" }
     ],
     "categoryId": 2
   },
@@ -150,10 +150,10 @@
     "description": "Healty and delicious smoothie, full of greens",
     "ingredients": ["Kiwi", "Cucumber", "mint", "avocado"],
     "nutritionFacts": [
-      { "Calories": "257" },
-      { "Total Fat": "20 g" },
-      { "Protein": "14 g" },
-      { "Sodium": "198 mg" }
+      { "id": 1, "element": "Calories", "value": "257" },
+      { "id": 2, "element": "Total Fat", "value": "20 g" },
+      { "id": 3, "element": "Protein", "value": "14 g" },
+      { "id": 4, "element": "Sodium", "value": "198 mg" }
     ],
     "categoryId": 3
   },
@@ -165,11 +165,11 @@
     "description": "A smoothie with strawberries, blueberries and banana is delicately sweet and entirely kid-friendly and extra frosty texture.",
     "ingredients": ["blueberries", "strawberries", "banana", "cashew milk"],
     "nutritionFacts": [
-      { "Calories": "239" },
-      { "Fiber": "5 g" },
-      { "Total Fat": "15 g" },
-      { "Protein": "12 g" },
-      { "Sodium": "486 mg" }
+      { "id": 1, "element": "Calories", "value": "239" },
+      { "id": 2, "element": "Fiber", "value": "5 g" },
+      { "id": 3, "element": "Total Fat", "value": "15 g" },
+      { "id": 4, "element": "Protein", "value": "12 g" },
+      { "id": 5, "element": "Sodium", "value": "486 mg" }
     ],
     "categoryId": 3
   },
@@ -181,11 +181,11 @@
     "description": "These margaritas get sweetness from mango nectar instead of simple syrup. The nectar adds a refreshingly tropical flavor that pairs nicely with muddled jalapeño and the spicy seasoning along the rim of each glass.",
     "ingredients": ["Mango nectar", "lime juice", "jalapeno", "ice cubes"],
     "nutritionFacts": [
-      { "Calories": "178" },
-      { "Fiber": "3 g" },
-      { "Total Fat": "13 g" },
-      { "Protein": "8 g" },
-      { "Sodium": "202 mg" }
+      { "id": 1, "element": "Calories", "value": "178" },
+      { "id": 2, "element": "Fiber", "value": "3 g" },
+      { "id": 3, "element": "Total Fat", "value": "13 g" },
+      { "id": 4, "element": "Protein", "value": "8 g" },
+      { "id": 5, "element": "Sodium", "value": "202 mg" }
     ],
     "categoryId": 3
   },
@@ -197,11 +197,11 @@
     "description": "Pineapple juice is rich in a variety of vitamins and minerals.",
     "ingredients": ["Pineapple", "coconut water", "ginger", "sugar"],
     "nutritionFacts": [
-      { "Calories": "158" },
-      { "Fiber": "2 g" },
-      { "Total Fat": "1 g" },
-      { "Vitamin C": "10 g" },
-      { "Sodium": "300 mg" }
+      { "id": 1, "element": "Calories", "value": "158" },
+      { "id": 2, "element": "Fiber", "value": "2 g" },
+      { "id": 3, "element": "Total Fat", "value": "1 g" },
+      { "id": 4, "element": "Vitamin C", "value": "10 g" },
+      { "id": 5, "element": "Sodium", "value": "300 mg" }
     ],
     "categoryId": 3
   }

@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Header from "./components/layout/Header";
 import Home from "./pages/Home";
 import Category from "./pages/Category";
+import Product from "./pages/Product";
 import Contact from "./pages/Contact";
 
 import { useCategories } from "./state/CategoriesContext";
@@ -26,7 +27,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} exact />
           {categoriesRoutes}
-          {/* <Route path="/product/:productId" element={<Product />} /> */}
+          <Route path="/product/:productId" element={<Product />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
