@@ -3,11 +3,13 @@ import { useCategories } from "../state/CategoriesContext";
 
 export default function CategoryDetails() {
   const params = useParams();
-  const { categories } = useCategories();
+  const { getCategoryByName } = useCategories();
 
-  const selectedCategory = categories.filter(
-    (item) => item.name.toLowerCase() == params.categoryName.toLowerCase()
-  )[0];
+  // const selectedCategory = categories.filter(
+  //   (item) => item.name.toLowerCase() == params.categoryName.toLowerCase()
+  // )[0];
+
+  const selectedCategory = getCategoryByName(params.categoryName);
 
   const image = require(`../assets/images/categories/${selectedCategory.image}`);
   const { name, description } = selectedCategory;

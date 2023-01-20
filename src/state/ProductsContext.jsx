@@ -7,7 +7,19 @@ const ProductsContext = createContext(null);
 export function ProductsProvider(props) {
   const products = ProductsData;
 
-  const contextValue = { products };
+  function getProductsByCategoryId(categoryId) {
+    const productList = products.filter(
+      (item) => item.categoryId == categoryId
+    );
+    return productList;
+  }
+
+  function getProductById(productId) {
+    const product = products.filter((item) => item.id == productId)[0];
+    return product;
+  }
+
+  const contextValue = { products, getProductById, getProductsByCategoryId };
 
   return (
     <ProductsContext.Provider value={contextValue}>

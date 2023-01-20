@@ -7,7 +7,19 @@ const CategoriesContext = createContext(null);
 export function CategoriesProvider(props) {
   const categories = CategoriesData;
 
-  const contextValue = { categories };
+  function getCategoryByName(categoryName) {
+    const category = categories.filter(
+      (item) => item.name.toLowerCase() == categoryName.toLowerCase()
+    )[0];
+    return category;
+  }
+
+  function getCategoryById(categoryId) {
+    const category = categories.filter((item) => item.id == categoryId)[0];
+    return category;
+  }
+
+  const contextValue = { categories, getCategoryByName, getCategoryById };
 
   return (
     <CategoriesContext.Provider value={contextValue}>
