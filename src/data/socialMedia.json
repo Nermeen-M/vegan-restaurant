@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "image": "Facebook.svg",
+    "altText": "Facebook",
+    "href": "https://www.facebook.com/"
+  },
+  {
+    "id": 2,
+    "image": "Instagram.svg",
+    "altText": "Instagram",
+    "href": "https://www.instagram.com/"
+  },
+  {
+    "id": 3,
+    "image": "Youtube.svg",
+    "altText": "Youtube",
+    "href": "https://youtube.com/"
+  }
+]

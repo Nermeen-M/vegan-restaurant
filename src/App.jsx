@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Category from "./pages/Category";
 import Product from "./pages/Product";
 import Contact from "./pages/Contact";
+import Footer from "./components/layout/Footer";
 
 import { useCategories } from "./state/CategoriesContext";
 
@@ -28,6 +29,7 @@ export default function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
+      <Footer />
     </div>
   );
 }
