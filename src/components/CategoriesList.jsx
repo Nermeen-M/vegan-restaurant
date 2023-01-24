@@ -1,9 +1,15 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { useCategories } from "../state/CategoriesContext";
 
 export default function CategoriesList() {
+  const navigate = useNavigate();
   const { categories, setSelectedCategory } = useCategories();
+
+  function onClick(item) {
+    setSelectedCategory(item);
+    navigate(`/${item.name}`);
+  }
 
   const categoriesList = categories.map((item) => (
     <div key={item.id} className="category-card">
@@ -13,18 +19,15 @@ export default function CategoriesList() {
       <div className="details">
         <h3>{item.name}</h3>
         <p>{item.description}</p>
-        <Link
-          to={`/${item.name}`}
-          className="primary-button"
-          onClick={() => {
-            setSelectedCategory(item);
-          }}
-        >
+        {/* this can create a conflict where users can right click, open in a new tab and break the context api, use a button and use the following solution instead */}
+        {/* <Link to={} onClick={} /> */}
+        <button className="primary-button" onClick={() => onClick(item)}>
           View menu
-        </Link>
+        </button>
       </div>
     </div>
   ));
+
   return (
     <div className="categories-list">
       <div className="container">{categoriesList}</div>

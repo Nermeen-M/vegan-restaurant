@@ -9,6 +9,9 @@ import Footer from "./components/layout/Footer";
 
 import "./assets/styles/style.css";
 
+// note: thanks for the spacing between imports. your code look really clean
+
+// perfect
 export default function App() {
   return (
     <div className="App">

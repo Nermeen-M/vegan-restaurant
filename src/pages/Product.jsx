@@ -2,14 +2,15 @@ import { Link, useParams } from "react-router-dom";
 import { useProducts } from "../state/ProductsContext";
 import { useCategories } from "../state/CategoriesContext";
 
+// format -1, the const selectedCategory was touching the return, making it hard to read
 export default function Product() {
   const params = useParams();
   const { getProductById } = useProducts();
   const { getCategoryById } = useCategories();
 
   const selectedProduct = getProductById(params.productId);
-
   const selectedCategory = getCategoryById(selectedProduct.categoryId);
+
   return (
     <div className="product-details container">
       <img
@@ -23,6 +24,7 @@ export default function Product() {
           <li key={index}>{item}</li>
         ))}
       </ul>
+      {/* following the home page, if you have done the full nutrition fact, that one should have a different component */}
       <h3>Nutrition Facts</h3>
       <table>
         <tbody>

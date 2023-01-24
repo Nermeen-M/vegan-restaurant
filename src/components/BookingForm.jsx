@@ -1,11 +1,13 @@
 import { useState } from "react";
 
+// no need to use the prefix entered, just go directly with name, setName, etc
+// this component is a bit long
 export default function BookingForm() {
   const [enteredName, setEnteredName] = useState("");
   const [enteredEmail, setEnteredEmail] = useState("");
   const [enteredDate, setEnteredDate] = useState("");
   const [enteredTime, setEnteredTime] = useState("");
-  const [formIsValid, setFormIsValid] = useState(true);
+  const [formIsValid, setFormIsValid] = useState(true); // booleans -1 ALWAYS START FALSE, otherwise means you can click enter without typing and send something empty
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
 
   function submitHandler(event) {
@@ -16,9 +18,6 @@ export default function BookingForm() {
       return;
     }
     setFormIsValid(true);
-
-    console.log(enteredName, enteredEmail, enteredDate, enteredTime);
-
     setEnteredName("");
     setEnteredEmail("");
     setEnteredDate("");
@@ -31,7 +30,6 @@ export default function BookingForm() {
       <div className="form-field">
         <label htmlFor="name">Full name</label>
         <input
-          id="name"
           type="text"
           placeholder="Full name"
           required
@@ -42,7 +40,6 @@ export default function BookingForm() {
       <div className="form-field">
         <label htmlFor="email">E-mail Address</label>
         <input
-          id="email"
           type="email"
           placeholder="E-mail"
           required
@@ -53,7 +50,6 @@ export default function BookingForm() {
       <div className="form-field">
         <label htmlFor="date">Date</label>
         <input
-          id="date"
           type="date"
           required
           value={enteredDate}
@@ -63,7 +59,6 @@ export default function BookingForm() {
       <div className="form-field">
         <label htmlFor="time">Time</label>
         <input
-          id="time"
           type="time"
           required
           value={enteredTime}
